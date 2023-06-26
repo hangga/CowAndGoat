@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tanda Terima Daging Shohibul Qurban</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+    </head>
+<body>
+    
+    <h3>Tools Kanggo Gawe Tanda Terima Daging Shohibul</h3>
+    <form action="print.html">
+        <br/>
+        <label for="nama">Tgl Pelaksanaan (Masehi):</label><br>
+        <input type="date" id="tgl" name="tgl"><br><br>
+        <label for="nama">Nama Shohibul Qurban:</label><br>
+        <input type="text" id="nama" name="nama" value="Siapa Nama Shohibulnya" style="width: 300px;"><br><br>
+        <label for="nama">Alamat:</label><br>
+        <input type="text" id="alamat" name="alamat" value="RT. Berapa gitu" style="width: 300px;"><br>
+        <br/>
+        <select name="kewan" id="kewan" style="width: 100px;">
+            <option value="sapi">Sapi</option>
+            <option value="kambing">Kambing</option>
+        </select>
+        <label for="no">Nomor</label>
+        <input style="width: 50px;" type="text" id="no" name="no" value="9"><br>
+        <br/><br/>
+        <input type="submit" value="Submit">
+      </form> 
+      <script>
+        document.getElementById('tgl').valueAsDate = new Date();
+        </script>
+</body>
+</html>

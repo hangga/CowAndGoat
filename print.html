@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tanda Terima Daging Shohibul Qurban</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+	<link rel="stylesheet" type="text/css" href="reset-fonts-grids.css" media="all" /> 
+	<link rel="stylesheet" type="text/css" href="resume.css" media="all" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script> -->
+
+	<script src="jspdf.umd.min.js "></script>
+	<script src="html2canvas.min.js"></script>
+    <script>
+	
+        function initContent() {
+            console.log("sectionName");
+    
+            var urlParams = new URLSearchParams(location.href);
+    
+            // Get value of single parameter
+            var sectionName = urlParams.get('nama');
+    
+            // Output value to console
+            console.log(sectionName); 
+            
+        }
+    </script>
+</head>
+<body>
+    
+
+<!-- print() -->
+
+<div id="doc2" class="yui-t7">
+
+	<div>
+		<div id="subinner">
+			<div id="hd">
+				<div class="yui-gc">
+					<div class="yui-u first" style="width: 150px;">
+						<img src="logo.png" width="100px;"/>
+					</div>
+					<div class="yui-u" style="margin-left: 0px; width: 50%; float: right;"></div>
+                        <h1>Panitia Qurban <span class="hijri"></span></h1>
+                        <h2>Masjid Muhtadien</h2>
+                        <p>Basen RT 14 RW 04 Purbayan Kotagede Yogyakarta. CP. 0853-2712-6334 – 0857 0306 1111</p>
+					</div>
+				</div><!--// .yui-gc -->
+			</div><!--// hd -->
+
+			<div id="bd">
+				<div id="yui-main">
+					<div class="yui-b">
+
+						<div class="yui-gf last">
+							<div class="yui-u first" style="width: 100%; margin: auto; text-align: center;">
+								
+                                <h2>(LEMBAR - 1, UNTUK SHOHIBUL QURBAN)</h2>
+                                    <h2>TANDA TERIMA DAN UCAPAN TERIMAKASIH</h2>
+								
+						    </div>
+						</div>
+						<!--// .yui-gf -->
+
+                        <div class="yui-gf last">
+							<div class="yui-u first">
+								<p>Kepada Yth<br/>
+                                Bapak/ Ibu/ Saudara/i<br/>
+                                di</p>
+                                
+							</div>
+							<div class="yui-u">
+									<div class="talent" style="width: 60%;">
+										<br/>
+										<h2><span class="nama" style="text-transform: capitalize;">Nama Shohibul</span></h2>
+										<p><span class="alamat">Alamat</span></p>
+									</div>
+
+									<div class="talent">
+										
+									</div>
+                                    <div class="job last" style="top: -50px;">
+                                        <h4 style="font-weight: 700; display: block; padding: 10px; background-color: black; color: #fff;"><span class="kewan">Kewan</span>&nbsp;<span class="no">Nomor</span></h4>
+                                    </div>
+							</div>
+						</div>
+
+                        <div class="yui-gf last">
+							
+								<p>
+                                    Assalaamu'alaikum wa rahmatullahi wa barakaatuh<br/><br/>
+                                    Alhamdulillah, dengan rahmat Allah ta’ala, pada hari ini hewan Qurban anda telah disembelih dan distribusikan kepada mustahiq.
+                                    Kami mengucapkan terimakasih sebesar-besarnya atas kepercayaannya. Semoga amal kita diridhai Allah ta’ala.
+                                    <br/><br/>
+                                    Wassalaamu'alaikum wa rahmatullahi wa barakaatuh
+                                </p>
+							
+						</div>
+
+                        <div class="yui-gf last">
+                            <div class="job last">
+                                <h4 style="top: 1.5em;">Yogyakarta, <span class="tgl"></span></h4>
+                            </div>
+                        </div>
+
+                        <div class="yui-gf">
+							
+							<div class="yui-u" style="width: 30%;">
+								<ul class="talent">
+									
+								</ul>
+
+								<ul class="talent">
+
+                                </ul>
+
+								<ul class="talent" style="margin: auto; text-align: center; width: 150%;">
+									<!-- <li>Pascal</li> -->
+									<p><br/>Ketua<br/><br/><br/><br/>Drs. Agus Saparudin</p>
+								</ul>
+							</div>
+						</div>
+
+                        <div class="yui-gf last">
+							<div class="yui-u first" style="width: 100%; margin: auto; text-align: center;">
+								
+                                <h2>(LEMBAR - 2, UNTUK PANITIA)</h2>
+                                    <h2>TANDA TERIMA</h2>
+								
+						    </div>
+
+                            <p>
+                                Telah kami terima 1/3 bagian daging Qurban atas nama:
+                            </p>
+                            
+						</div>
+                        
+
+
+						<div class="yui-gf last">
+							<div class="yui-u first">
+								<p>Nama Shohibul<br/>Alamat</p>
+							</div>
+							<div class="yui-u">
+								<ul class="talent last">
+									<li class="last"><span class="nama" style="text-transform: capitalize;">Nama Shohibul</span></li>
+									<li class="last"><span class="alamat">Alamat</span></li>
+								</ul>
+
+								<div class="job last" style="top: -80px;">
+                                    <h4 style="font-weight: 700; display: block; padding: 10px; background-color: black; color: #fff;"><span class="kewan">Kewan</span>&nbsp;<span class="no">Nomor</span></h4>
+                                </div>
+							</div>
+						</div><!--// .yui-gf-->
+
+                         <div class="yui-gf last">
+                            <div class="job last">
+                                <h4 style="top: 1.5em;">Yogyakarta, <span class="tgl"></span></h4>
+                            </div>
+                        </div>
+
+                        
+                        <div class="yui-gf last">
+							<div class="yui-u first" style="width: 30%;">
+								<ul class="talent">
+									<ul class="talent" style="margin: auto; text-align: center; width: 200%;">
+										<!-- <li>Pascal</li> -->
+										<p><br/>Petugas Pengantar<br/><br/><br/></p>
+										<div class="line"></div>
+									</ul>
+								</ul>
+							</div>
+							
+							<div class="yui-u" style="width: 30%;">
+								
+
+								<ul class="talent">
+
+                                </ul>
+
+								<ul class="talent" style="margin: auto; text-align: center; width: 150%;">
+									<!-- <li>Pascal</li> -->
+									<p><br/>Shohibul Qurban<br/><br/><br/><br/><span class="nama" style="text-transform: capitalize;">Nama Shohibul</span></p>
+								</ul>
+							</div>
+						</div>
+
+						
+
+
+					</div><!--// .yui-b -->
+				</div><!--// yui-main -->
+			</div><!--// bd -->
+
+			
+		</div>
+	</div><!-- // inner -->
+
+
+</div><!--// doc -->
+
+<script>
+	function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
+        function(m,key,value) {
+        vars[key] = value;
+        });
+        return vars;
+    }
+
+	const tglNow = new Date(getUrlVars()["tgl"]);
+	const nama = getUrlVars()["nama"];
+	const alamat = getUrlVars()["alamat"];
+    const kewan = getUrlVars()["kewan"];
+    const no = getUrlVars()["no"];
+	const hijri = new Intl.DateTimeFormat('ID-TN-u-ca-islamic', 
+            {/* day: 'numeric', month: 'long',weekday: 'long', */year : 'numeric'}
+        ).format(tglNow);
+	//getUrlVars()["hijri"];
+
+	
+	const options = { year: 'numeric', month: 'long', day: 'numeric' };
+	tgl = tglNow.toLocaleDateString('ID', options);
+
+	document.getElementsByClassName("tgl")[0].innerHTML = tgl;
+	document.getElementsByClassName("tgl")[1].innerHTML = tgl;
+    
+    
+	document.getElementsByClassName("hijri")[0].innerHTML= hijri;
+    document.getElementsByClassName("nama")[0].innerHTML= nama.replace(/[%20+]/g," "); // replace(/%20/g, " ");
+    document.getElementsByClassName("nama")[1].innerHTML= nama.replace(/[%20+]/g," "); //(/%20/g, " ");
+    document.getElementsByClassName("nama")[2].innerHTML= nama.replace(/[%20+]/g," "); //(/%20/g, " ");
+	document.getElementsByClassName("alamat")[0].innerHTML= alamat.replace(/[%20+]/g," "); //(/%20/g, " ");
+	document.getElementsByClassName("alamat")[1].innerHTML= alamat.replace(/[%20+]/g," "); //(/%20/g, " ");
+    document.getElementsByClassName("kewan")[0].innerHTML= kewan.toUpperCase();
+    document.getElementsByClassName("kewan")[1].innerHTML= kewan.toUpperCase();
+    document.getElementsByClassName("no")[0].innerHTML= no.toUpperCase();
+    document.getElementsByClassName("no")[1].innerHTML= no.toUpperCase();
+    //alert(nama + " - " + kewan);
+    //alert("The URL of this page is: " + window.location.href);
+	window.print(); 
+
+</script>
+</body>
+</html>
