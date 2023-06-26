@@ -215,30 +215,25 @@
         return vars;
     }
 
-	const tglNow = new Date(getUrlVars()["tgl"]);
+	const inputTgl = new Date(getUrlVars()["tgl"]);
+	const hijri = new Intl.DateTimeFormat('ID-TN-u-ca-islamic',{year : 'numeric'}).format(inputTgl);
+	const options = { year: 'numeric', month: 'long', day: 'numeric' };
+	tgl = inputTgl.toLocaleDateString('ID', options);
+
 	const nama = getUrlVars()["nama"];
 	const alamat = getUrlVars()["alamat"];
     const kewan = getUrlVars()["kewan"];
     const no = getUrlVars()["no"];
-	const hijri = new Intl.DateTimeFormat('ID-TN-u-ca-islamic', 
-            {/* day: 'numeric', month: 'long',weekday: 'long', */year : 'numeric'}
-        ).format(tglNow);
-	//getUrlVars()["hijri"];
-
 	
-	const options = { year: 'numeric', month: 'long', day: 'numeric' };
-	tgl = tglNow.toLocaleDateString('ID', options);
-
+	
 	document.getElementsByClassName("tgl")[0].innerHTML = tgl;
 	document.getElementsByClassName("tgl")[1].innerHTML = tgl;
-    
-    
 	document.getElementsByClassName("hijri")[0].innerHTML= hijri;
-    document.getElementsByClassName("nama")[0].innerHTML= nama.replace(/[%20+]/g," "); // replace(/%20/g, " ");
-    document.getElementsByClassName("nama")[1].innerHTML= nama.replace(/[%20+]/g," "); //(/%20/g, " ");
-    document.getElementsByClassName("nama")[2].innerHTML= nama.replace(/[%20+]/g," "); //(/%20/g, " ");
-	document.getElementsByClassName("alamat")[0].innerHTML= alamat.replace(/[%20+]/g," "); //(/%20/g, " ");
-	document.getElementsByClassName("alamat")[1].innerHTML= alamat.replace(/[%20+]/g," "); //(/%20/g, " ");
+    document.getElementsByClassName("nama")[0].innerHTML= decodeURI(nama).replace(/[+]/g," ");
+    document.getElementsByClassName("nama")[1].innerHTML= decodeURI(nama).replace(/[+]/g," ");
+    document.getElementsByClassName("nama")[2].innerHTML= decodeURI(nama).replace(/[+]/g," ");
+	document.getElementsByClassName("alamat")[0].innerHTML= decodeURI(alamat).replace(/[+]/g," ");
+	document.getElementsByClassName("alamat")[1].innerHTML= decodeURI(alamat).replace(/[+]/g," ");
     document.getElementsByClassName("kewan")[0].innerHTML= kewan.toUpperCase();
     document.getElementsByClassName("kewan")[1].innerHTML= kewan.toUpperCase();
     document.getElementsByClassName("no")[0].innerHTML= no.toUpperCase();
