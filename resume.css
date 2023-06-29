@@ -42,13 +42,13 @@ body {
     border: solid #666; 
     border-width: 8px 0 2px 0; 
 }
-.yui-gf { margin-bottom: 1em; padding-bottom: 2em; border-bottom: 1px solid #ccc; }
+.yui-gf { margin-bottom: 1em; padding-bottom: 2em; border-bottom: 1px dashed #666; }
 
 /* //-- header, body, footer -- */
 #hd { 
     margin: 2.5em 0 3em 0; 
     padding-bottom: 1.5em; 
-    border-bottom: 1px solid #ccc 
+    border-bottom: 1px solid black
 }
 #hd h2 { 
 /*    text-transform: uppercase; */
@@ -242,5 +242,10 @@ a#pdf:hover {
     border-bottom: 1px solid black;
     position: absolute;
 }
+
+/* .kota{
+    margin-top: -10px; 
+    margin-right: 100.5em;
+} */
 
 

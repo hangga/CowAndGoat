@@ -105,13 +105,16 @@
 
                         <div class="yui-gf last">
                             <div class="job last">
-                                <h4 style="top: 1.5em;">Yogyakarta, <span class="tgl"></span></h4>
+								<h4 style="top : 40px; right: 240px;">Yogyakarta,</h4>
+								<div class="line" style="top : 4px; right: 10px; width: 220px;"></div>
+                                <h4 style="top: 1.5em; text-align: center; width: 230px;"><span class="tgl"></span> M</h4>
+								<h4 style="top: 3em; text-align: center; width: 230px;"><span class="hijridate"></span></h4>
                             </div>
                         </div>
 
                         <div class="yui-gf">
 							
-							<div class="yui-u" style="width: 30%;">
+							<div class="yui-u" style="width: 30%; margin-top: 20px;">
 								<ul class="talent">
 									
 								</ul>
@@ -160,13 +163,22 @@
 						</div><!--// .yui-gf-->
 
                          <div class="yui-gf last">
-                            <div class="job last">
-                                <h4 style="top: 1.5em;">Yogyakarta, <span class="tgl"></span></h4>
+                            <!-- <div class="job last">
+								<h4 style="top: 2em; left: 2em;">Yogyakarta</h4>
+                                <h4 style="top: 1.5em;">Yogyakarta, <span class="tgl"></span> M</h4>
+								<h4 style="top: 2.5em;"><span class="hijridate"></span></h4>
+                            </div> -->
+
+							<div class="job last">
+								<h4 class="city" style="top : 40px; right: 240px;">Yogyakarta,</h4>
+								<div class="line" style="top : 4px; right: 10px; width: 220px;"></div>
+                                <h4 style="top: 1.5em; text-align: center; width: 230px;"><span class="tgl"></span> M</h4>
+								<h4 style="top: 3em; text-align: center; width: 230px;"><span class="hijridate"></span></h4>
                             </div>
                         </div>
 
                         
-                        <div class="yui-gf last">
+                        <div class="yui-gf last" style="margin-top: 40px;">
 							<div class="yui-u first" style="width: 30%;">
 								<ul class="talent">
 									<ul class="talent" style="margin: auto; text-align: center; width: 200%;">
@@ -232,6 +244,9 @@
 	document.getElementsByClassName("hijri")[0].innerHTML= hijriYear;
 	document.getElementsByClassName("tgl")[0].innerHTML = tgl;
 	document.getElementsByClassName("tgl")[1].innerHTML = tgl;
+
+	document.getElementsByClassName("hijridate")[0].innerHTML = hijriDate;
+	document.getElementsByClassName("hijridate")[1].innerHTML = hijriDate;
 	
 	//const nama = decodeURI(pnama).replace(/[+]/g," ");
 	//const alamat = decodeURI(palamat).replace(/[+]/g," ");
