@@ -223,7 +223,7 @@
         var vars = {};
         var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
         function(m,key,value) {
-        vars[key] = value;
+        	vars[key] = value;
         });
         return vars;
     }
@@ -233,9 +233,6 @@
 	const hijriDate = new Intl.DateTimeFormat('ID-TN-u-ca-islamic',{day: 'numeric', month: 'long',year : 'numeric'}).format(inputTgl);
 	const options = { year: 'numeric', month: 'long', day: 'numeric' };
 	tgl = inputTgl.toLocaleDateString('ID', options);
-
-	//alert(hijriDate);
-
 	const nama = decodeURI(getUrlVars()["nama"]).replace(/[+]/g," ");
 	const alamat = decodeURI(getUrlVars()["alamat"]).replace(/[+]/g," ");
     const kewan = getUrlVars()["kewan"].toUpperCase();
@@ -244,16 +241,9 @@
 	document.getElementsByClassName("hijri")[0].innerHTML= hijriYear;
 	document.getElementsByClassName("tgl")[0].innerHTML = tgl;
 	document.getElementsByClassName("tgl")[1].innerHTML = tgl;
-
 	document.getElementsByClassName("hijridate")[0].innerHTML = hijriDate;
 	document.getElementsByClassName("hijridate")[1].innerHTML = hijriDate;
-	
-	//const nama = decodeURI(pnama).replace(/[+]/g," ");
-	//const alamat = decodeURI(palamat).replace(/[+]/g," ");
-	//const kewan = pkewan.toUpperCase();
-	//const no = pno.toUpperCase();
-
-    document.getElementsByClassName("nama")[0].innerHTML = nama;
+	document.getElementsByClassName("nama")[0].innerHTML = nama;
     document.getElementsByClassName("nama")[1].innerHTML = nama;
     document.getElementsByClassName("nama")[2].innerHTML = nama;
 	document.getElementsByClassName("alamat")[0].innerHTML = alamat;
@@ -262,9 +252,7 @@
     document.getElementsByClassName("kewan")[1].innerHTML= kewan;
     document.getElementsByClassName("no")[0].innerHTML= no;
     document.getElementsByClassName("no")[1].innerHTML= no;
-    //alert(nama + " - " + kewan);
-    //alert("The URL of this page is: " + window.location.href);
-	
+    
 	document.title = "[TANDA TERIMA]-[" + kewan.toUpperCase() +" "+ no+ "]-"+ nama;
 	window.print(); 
 	
