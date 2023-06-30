@@ -10,12 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="reset-fonts-grids.css" media="all" /> 
 	<link rel="stylesheet" type="text/css" href="resume.css" media="all" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script> -->
-
-	<script src="jspdf.umd.min.js "></script>
-	<script src="html2canvas.min.js"></script>
+	
     <script>
 	
         function initContent() {
@@ -32,7 +27,7 @@
         }
     </script>
 </head>
-<body onafterprint="closeTab()">
+<body>
     
 
 <!-- print() -->
@@ -125,7 +120,7 @@
 
 								<ul class="talent" style="margin: auto; text-align: center; width: 150%;">
 									<!-- <li>Pascal</li> -->
-									<p><br/>Ketua<br/><br/><br/><br/>Drs. Agus Saparudin</p>
+									<p><br/>Ketua<br/><br/><br/><br/><span class="ketua">Nama Ketuanya</span></p>
 								</ul>
 							</div>
 						</div>
@@ -232,12 +227,18 @@
 	const hijriYear = new Intl.DateTimeFormat('ID-TN-u-ca-islamic',{year : 'numeric'}).format(inputTgl);
 	const hijriDate = new Intl.DateTimeFormat('ID-TN-u-ca-islamic',{day: 'numeric', month: 'long',year : 'numeric'}).format(inputTgl);
 	const options = { year: 'numeric', month: 'long', day: 'numeric' };
-	tgl = inputTgl.toLocaleDateString('ID', options);
+	const tgl = inputTgl.toLocaleDateString('ID', options);
+	
 	const nama = decodeURI(getUrlVars()["nama"]).replace(/[+]/g," ");
 	const alamat = decodeURI(getUrlVars()["alamat"]).replace(/[+]/g," ");
     const kewan = getUrlVars()["kewan"].toUpperCase();
     const no = getUrlVars()["no"].toUpperCase();
-	
+
+	var ketua = decodeURI(getUrlVars()["ketua"]).replace(/[+]/g," ");
+	if (ketua === "undefined") {
+		ketua = "Drs. Agus Saparudin";
+	}
+
 	document.getElementsByClassName("hijri")[0].innerHTML= hijriYear;
 	document.getElementsByClassName("tgl")[0].innerHTML = tgl;
 	document.getElementsByClassName("tgl")[1].innerHTML = tgl;
@@ -252,8 +253,10 @@
     document.getElementsByClassName("kewan")[1].innerHTML= kewan;
     document.getElementsByClassName("no")[0].innerHTML= no;
     document.getElementsByClassName("no")[1].innerHTML= no;
+	document.getElementsByClassName("ketua")[0].innerHTML= ketua;
     
 	document.title = "[TANDA TERIMA]-[" + kewan.toUpperCase() +" "+ no+ "]-"+ nama;
+
 	window.print(); 
 	
 
