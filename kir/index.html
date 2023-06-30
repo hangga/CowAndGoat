@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KIR</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+    </head>
+<body style="margin-left: 100px;">
+    
+    <form action="print.html" >
+        <br/>
+        <!-- <label for="nama">Tgl Pelaksanaan (Masehi):</label><br>
+        <input type="date" id="tgl" name="tgl"><br><br>
+        <br/> -->
+        <h2>Total KIR</h2>
+        <label for="kirsapi">Total KIR Sapi</label><br/>
+        <input style="width: 100px;" type="text" id="kirsapi" name="kirsapi" value="9"><label>Kg</label>
+        <br/><br/>
+        <label for="kirkambing">Total KIR Kambing</label><br/>
+        <input style="width: 100px;" type="text" id="kirsapi" name="kirkambing" value="9"><label>Kg</label><br/><br/>
+
+        <h2>Rencana Distribusi</h2>
+        <label for="totalwarga">Jumlah Warga</label><br/>
+        <input style="width: 100px;" type="text" id="totalwarga" name="totalwarga" value="9"><label>Jiwa</label><br/><br/>
+
+        <label for="totalrewangan">Jumlah Rewangan</label><br/>
+        <input style="width: 100px;" type="text" id="totalrewangan" name="totalrewangan" value="9"><label>Jiwa</label><br/><br/>
+
+        <input type="submit" value="Hitung">
+      </form> 
+      <script>
+        document.getElementById('tgl').valueAsDate = new Date();
+        </script>
+</body>
+</html>
