@@ -208,15 +208,24 @@
     }
 
 	const inputTgl = new Date(getUrlVars()["tgl"]);
-	const hijriYear = new Intl.DateTimeFormat('ID-TN-u-ca-islamic',{year : 'numeric'}).format(inputTgl);
-	const hijriDate = new Intl.DateTimeFormat('ID-TN-u-ca-islamic',{day: 'numeric', month: 'long',year : 'numeric'}).format(inputTgl);
+
 	const options = { year: 'numeric', month: 'long', day: 'numeric' };
 	const tgl = inputTgl.toLocaleDateString('ID', options);
+	
+	const tolerance = parseInt(getUrlVars()["tolerance"], 10);
+	const hijriYear = new Intl.DateTimeFormat('ID-TN-u-ca-islamic',{year : 'numeric'}).format(inputTgl);
+	
+	var tolerancedDate = inputTgl;
+	tolerancedDate.setDate(tolerancedDate.getDate() + tolerance);
+	
+	const hijriDate = new Intl.DateTimeFormat('ID-TN-u-ca-islamic',{day: 'numeric', month: 'long',year : 'numeric'}).format(tolerancedDate);
+	
 	
 	const nama = decodeURI(getUrlVars()["nama"]).replace(/[+]/g," ");
 	const alamat = decodeURI(getUrlVars()["alamat"]).replace(/[+]/g," ");
     const kewan = getUrlVars()["kewan"].toUpperCase();
     const no = getUrlVars()["no"].toUpperCase();
+	
 
 	var ketua = decodeURI(getUrlVars()["ketua"]).replace(/[+]/g," ");
 	if (ketua === "undefined") {
@@ -241,7 +250,7 @@
     
 	document.title = "[TANDA TERIMA]-[" + kewan.toUpperCase() +" "+ no+ "]-"+ nama;
 
-	window.print(); 
+	// window.print(); 
 	
 
 </script>
